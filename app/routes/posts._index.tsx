@@ -1,5 +1,6 @@
 import { json } from "@remix-run/node";
 import { Link, useLoaderData } from "@remix-run/react";
+
 import { getPostListings } from "~/models/post.server";
 
 export const loader = async () => {
@@ -16,6 +17,9 @@ function PostRoute() {
         <h1>
             Post
         </h1>
+        <Link to="admin" className="text-red-600 underline">
+          Admin
+        </Link>
         <ul>
         {posts.map((post) => (
           <li key={post.slug}>

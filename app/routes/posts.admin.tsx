@@ -23,6 +23,7 @@ export default function PostAdmin() {
                 <Link
                   to={post.slug}
                   className="text-blue-600 underline"
+                  prefetch="intent"
                 >
                   {post.title}
                 </Link>
